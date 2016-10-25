@@ -25,6 +25,8 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Place VOLUME statement below all changes to /var/lib/mysql
 VOLUME /var/lib/mysql
+RUN mkdir -p /home/workdata
+VOLUME /home/workdata
 
 # By default will run as random user on openshift and the mysql user (27)
 # everywhere else
